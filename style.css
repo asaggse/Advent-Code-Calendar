@@ -14,10 +14,10 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
- }
+}
 
- /* Generic rules */
- html {
+/* Generic rules */
+html {
    color: #ffffff;
    background-color: #120945;
    font-family: 'Livvic', sans-serif;
@@ -28,8 +28,8 @@ h1 {
    font-size: 30px;
    font-weight: 600;
    text-align: center;
-   color: #de7eb6;
-   margin-bottom: 24px;
+   /* color: #de7eb6; */
+   padding: 32px 16px;
 }
 
 /* Header */
@@ -37,7 +37,7 @@ header {
    height: 220px;
    background-color: #4b61d1;
    border-radius: 0 0 20px 20px;
-   
+
    position: sticky;
    top: 0;
    left: 0;
@@ -46,4 +46,106 @@ header {
    background-repeat: no-repeat;
    background-position: center 70px;
    background-image: url('images/header-bg.png');
+}
+
+/* Calendar */
+
+.calendar {
+   padding: 5px;
+
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.box {
+   width: 80px;
+   height: 80px;
+   margin: 5px;
+   border-radius: 12px;
+   background-color: #306753;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.box:last-child {
+   width: 100%;
+   color: #306753;
+   background-color: #d4d7f5;
+}
+
+.box-icon {
+   width: 20px;
+   height: 20px;
+
+}
+
+.box-date {
+   font-size: 30px;
+   font-weight: 600;
+}
+
+.box-opened {
+   opacity: 0.6;
+}
+
+/* Modal */
+.modal-overlay {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   height: 100%;
+   width: 100%;
+
+   padding: 32px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   background-color: rgba(18, 9, 69, 0.5);
+}
+
+.modal-window {
+   min-width: 320px;
+   min-height: 320px;
+   background-color: #de7eb6;
+   border-radius: 12px;
+
+   padding: 32px;
+   text-align: center;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+
+   transform: scale(1);
+
+   transition: transform 0.5s;
+}
+
+.modal-content {
+   margin-bottom: 12px;
+}
+
+.modal-content * {
+   max-width: 100%;
+}
+
+.modal-button {
+   border: 0;
+   padding: 8px 12px;
+   font-size: 20px;
+   background-color: #4b61d1;
+   color: #ffffff;
+}
+
+.modal-hidden {
+   visibility: hidden;
+}
+
+.modal-hidden .modal-window {
+   transform: scale(0);
 }
