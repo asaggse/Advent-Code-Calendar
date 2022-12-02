@@ -1,0 +1,49 @@
+/*
+    Colors:
+    blue: #4b61d1;
+    dark blue: #120945;
+    gray: #d4d7f5;
+    green: #306753;
+    pink: #de7eb6;
+    yellow: #f2ad41;
+    white: #ffffff;
+*/
+
+/* CSS Reset */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ /* Generic rules */
+ html {
+   color: #ffffff;
+   background-color: #120945;
+   font-family: 'Livvic', sans-serif;
+   line-height: 1;
+}
+
+h1 {
+   font-size: 30px;
+   font-weight: 600;
+   text-align: center;
+   color: #de7eb6;
+   margin-bottom: 24px;
+}
+
+/* Header */
+header {
+   height: 220px;
+   background-color: #4b61d1;
+   border-radius: 0 0 20px 20px;
+   
+   position: sticky;
+   top: 0;
+   left: 0;
+
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center 70px;
+   background-image: url('images/header-bg.png');
+}
