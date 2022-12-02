@@ -6,141 +6,50 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Advent Code Calendar</title>
+
    <!-- Google Font -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,500;0,700;1,600&display=swap"
       rel="stylesheet">
+
    <!-- Style -->
    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-   <!-- Header -->
-   <header>
-      <h1>Advent Code Calendar</h1>
-   </header>
+   <div class="container">
+      <!-- Header -->
+      <header>
+         <h1>Advent Code Calendar</h1>
+      </header>
 
-   <!-- Main -->
-   <main>
-      <!-- Calendar -->
-      <div class="calendar">
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">1</div>
+      <!-- Main -->
+      <main>
+         <!-- Calendar -->
+         <div class="calendar">
+            <!--   
+            <div class="box">
+               <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
+               <div class="box-date">1</div>
+            </div>
+         -->
          </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-albero.png" alt="icon">
-            <div class="box-date">2</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-calza.png" alt="icon">
-            <div class="box-date">3</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-caramella.png" alt="icon">
-            <div class="box-date">4</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">5</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">6</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">7</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">8</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">9</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">10</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">11</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">12</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">13</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">14</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">15</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">16</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">17</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">18</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">19</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">20</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">21</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">22</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">23</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">24</div>
-         </div>
-         <div class="box">
-            <img class="box-icon" src="images/icons/ico-neve.png" alt="icon">
-            <div class="box-date">25</div>
-         </div>
-      </div>
 
-      <!-- Modal -->
-      <div class="modal-overlay">
-         <div class="modal-window">
-            <div class="modal-content">
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam repudiandae praesentium amet et
-                  inventore iste fugit vero ipsum qui harum, quam repellendus debitis animi? Odit animi officia
-                  consequuntur fuga voluptates.</p>
-               <button class="modal-button">CLOSE</button>
+         <!-- Modal -->
+         <div class="modal-overlay modal-hidden">
+            <div class="modal-window">
+               <div class="modal-content">
+                  <button class="modal-button">CLOSE</button>
+               </div>
             </div>
          </div>
-      </div>
 
-   </main>
-
+      </main>
+   </div>
+   <!-- Javascript -->
+   <script src="source.js"></script>
+   <script src="script.js"></script>
 </body>
 
 </html>
