@@ -43,3 +43,14 @@ function openModal() {
 function closeModal() {
    modal.classList.add('modal-hidden')
 }
+
+function insertModalContent(i) {
+   const surprise = source[i];
+
+   if (surprise.type == "image") {
+      modalContent.innerHTML = `<img src="${surprise.url}" alt="${surprise.title}">`;
+   } else if (surprise.type == "text") {
+      modalContent.innerHTML = `<p>${surprise.text}</p>`;
+
+   }
+}
