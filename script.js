@@ -20,6 +20,10 @@ for (let i = 0; i < boxes.length; i++) {
    });
 }
 
+modalButton.addEventListener('click', function () {
+   closeModal();
+});
+
 /* Functions */
 function createBox(i) {
    const date = i + 1;
