@@ -3,10 +3,10 @@
     blue: #4b61d1;
     dark blue: #120945;
     gray: #d4d7f5;
-    green: #306753;
+    green: #008c45;
     pink: #de7eb6;
     yellow: #f2ad41;
-    white: #ffffff;
+    white: #f4f5f0;
 */
 
 /* CSS Reset */
@@ -23,7 +23,7 @@
 
 /* Generic rules */
 html {
-   color: #ffffff;
+   color: #f4f5f0;
    background-color: #120945;
    font-family: 'Livvic', sans-serif;
    line-height: 1;
@@ -70,7 +70,7 @@ header {
    height: 80px;
    margin: 5px;
    border-radius: 12px;
-   background-color: #306753;
+   background-color: #008c45;
 
    display: flex;
    flex-direction: column;
@@ -149,7 +149,7 @@ header {
    padding: 8px 12px;
    font-size: 20px;
    background-color: #4b61d1;
-   color: #ffffff;
+   color: #f4f5f0;
 }
 
 .modal-hidden {
