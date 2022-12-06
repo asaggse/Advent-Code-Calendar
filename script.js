@@ -1,5 +1,5 @@
 const calendar = document.querySelector('.calendar');
-const modal = document.querySelector('.modal');
+const modal = document.querySelector('#modal');
 const modalContent = document.querySelector('.modal-content');
 const modalButton = document.querySelector('.modal-button');
 
@@ -7,6 +7,17 @@ for (let i = 0; i < source.length; i++) {
    const box = createBox(i);
 
    calendar.innerHTML += box;
+}
+
+const boxes = document.querySelectorAll('.box');
+for (let i = 0; i < boxes.length; i++) {
+   const box = boxes[i];
+
+   box.addEventListener('click', function () {
+      box.classList.add('box-opened');
+
+      openModal();
+   });
 }
 
 /* Functions */
@@ -19,4 +30,12 @@ function createBox(i) {
          <img class="box-icon" src="images/icons/${icon}.png" alt="icon">
          <div class="box-date">${date}</div>
       </div>`;
+}
+
+function openModal() {
+   modal.classList.remove('modal-hidden')
+}
+
+function closeModal() {
+   modal.classList.add('modal-hidden')
 }
