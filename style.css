@@ -79,9 +79,9 @@ header {
 }
 
 .box:last-child {
-   width: 100%;
-   color: #306753;
-   background-color: #d4d7f5;
+   width: calc(100% - 15px);
+   color: #008c45;
+   background-color: #f4f5f0;
 }
 
 .box-icon {
