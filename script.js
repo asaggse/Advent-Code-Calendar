@@ -16,6 +16,8 @@ for (let i = 0; i < boxes.length; i++) {
    box.addEventListener('click', function () {
       box.classList.add('box-opened');
 
+      insertModalContent(i)
+
       openModal();
    });
 }
