@@ -3,6 +3,9 @@ const modal = document.querySelector('#modal');
 const modalContent = document.querySelector('.modal-content');
 const modalButton = document.querySelector('.modal-button');
 
+const openedIndexs = [];
+console.log(openedIndexs);
+
 for (let i = 0; i < source.length; i++) {
    const box = createBox(i);
 
@@ -17,8 +20,9 @@ for (let i = 0; i < boxes.length; i++) {
       box.classList.add('box-opened');
 
       insertModalContent(i)
-
       openModal();
+
+      addToOpenedIdexes(i);
    });
 }
 
@@ -55,4 +59,13 @@ function insertModalContent(i) {
       modalContent.innerHTML = `<p>${surprise.text}</p>`;
 
    }
+}
+
+function addToOpenedIdexes(i){
+   if(!openedIndexs.includes(i)){
+      openedIndexs.push(i);
+
+      localStorage.setItem('myList', JSON.stringify(openedIndexs));
+   }
+   console.log(openedIndexs);
 }
