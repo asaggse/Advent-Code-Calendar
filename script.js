@@ -8,7 +8,7 @@ console.log(openedIndexs);
 
 /* Main */
 const previouslyOpenedIndexes = localStorage.getItem('myList');
-if(previouslyOpenedIndexes){
+if (previouslyOpenedIndexes) {
    openedIndexs = JSON.parse(previouslyOpenedIndexes);
    console.log(openedIndexs);
 }
@@ -41,9 +41,14 @@ modalButton.addEventListener('click', function () {
 function createBox(i) {
    const date = i + 1;
    const icon = source[i].icon;
+   let classes = "box";
+
+   if(openedIndexs.includes(i)){
+      classes = "box box-opened";
+   }
 
    return `
-      <div class="box">
+      <div class="${classes}">
          <img class="box-icon" src="images/icons/${icon}.png" alt="icon">
          <div class="box-date">${date}</div>
       </div>`;
@@ -68,8 +73,8 @@ function insertModalContent(i) {
    }
 }
 
-function addToOpenedIdexes(i){
-   if(!openedIndexs.includes(i)){
+function addToOpenedIdexes(i) {
+   if (!openedIndexs.includes(i)) {
       openedIndexs.push(i);
 
       localStorage.setItem('myList', JSON.stringify(openedIndexs));
