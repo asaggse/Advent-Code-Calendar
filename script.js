@@ -3,8 +3,15 @@ const modal = document.querySelector('#modal');
 const modalContent = document.querySelector('.modal-content');
 const modalButton = document.querySelector('.modal-button');
 
-const openedIndexs = [];
+let openedIndexs = [];
 console.log(openedIndexs);
+
+/* Main */
+const previouslyOpenedIndexes = localStorage.getItem('myList');
+if(previouslyOpenedIndexes){
+   openedIndexs = JSON.parse(previouslyOpenedIndexes);
+   console.log(openedIndexs);
+}
 
 for (let i = 0; i < source.length; i++) {
    const box = createBox(i);
