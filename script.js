@@ -13,22 +13,33 @@ if (previouslyOpenedIndexes) {
    console.log(openedIndexs);
 }
 
+// Render calendar using DOM methods for performance and correct class assignment
+calendar.innerHTML = '';
 for (let i = 0; i < source.length; i++) {
-   const box = createBox(i);
-
-   calendar.innerHTML += box;
+   const boxElem = document.createElement('div');
+   boxElem.className = 'box';
+   if (openedIndexs.includes(i)) {
+      boxElem.classList.add('box-opened');
+   }
+   const icon = document.createElement('img');
+   icon.className = 'box-icon';
+   icon.src = `images/icons/${source[i].icon}.png`;
+   icon.alt = 'icon';
+   const dateDiv = document.createElement('div');
+   dateDiv.className = 'box-date';
+   dateDiv.textContent = i + 1;
+   boxElem.appendChild(icon);
+   boxElem.appendChild(dateDiv);
+   calendar.appendChild(boxElem);
 }
 
 const boxes = document.querySelectorAll('.box');
 for (let i = 0; i < boxes.length; i++) {
    const box = boxes[i];
-
    box.addEventListener('click', function () {
       box.classList.add('box-opened');
-
-      insertModalContent(i)
+      insertModalContent(i);
       openModal();
-
       addToOpenedIdexes(i);
    });
 }
@@ -64,12 +75,17 @@ function closeModal() {
 
 function insertModalContent(i) {
    const surprise = source[i];
-
+   // Clear previous content
+   modalContent.innerHTML = '';
    if (surprise.type == "image") {
-      modalContent.innerHTML = `<img src="${surprise.url}" alt="${surprise.title}">`;
+      const img = document.createElement('img');
+      img.src = surprise.url;
+      img.alt = surprise.title;
+      modalContent.appendChild(img);
    } else if (surprise.type == "text") {
-      modalContent.innerHTML = `<p>${surprise.text}</p>`;
-
+      const p = document.createElement('p');
+      p.textContent = surprise.text;
+      modalContent.appendChild(p);
    }
 }
 
